@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import "./footer.css";
-
+import "../footer/footer.css";
+import { Link } from 'react-router-dom';
+import Feedback from '../feedback/feedback';
 export default function Navbar() {
   const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState([]);
@@ -46,6 +47,8 @@ export default function Navbar() {
           </div>
         </div>
       </div>
+
+      <Feedback />
 
       <footer className="bg-white">
         <div className="mx-auto max-w-screen-xl px-4 pb-8 pt-16 sm:px-6 lg:px-8">
@@ -238,6 +241,8 @@ export default function Navbar() {
     </div>
   </div>
       </footer>
+
+
     </div>
   );
 }
